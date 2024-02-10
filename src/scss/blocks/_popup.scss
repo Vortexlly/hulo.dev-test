@@ -1,0 +1,96 @@
+.popup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    &__player {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        & .slick-list {
+            height: 100%;
+        }
+
+        & .players-container__item {
+            width: 100vw;
+            height: 100%;
+        }
+    }
+
+    & .players-container__item iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__dots {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        li {
+            position: relative;
+            width: 25px;
+            height: 100%;
+            list-style-type: none;
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: #fff;
+                border-radius: 100%;
+                opacity: .4;
+                transition: all .5s;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            button {
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+        }
+        li.slick-active {
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+    }
+
+    &__close-btn {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        background: none;
+        font-size: 30px;
+        line-height: 0;
+        text-align: center;
+        opacity: .4;
+        transition: all .5s;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.3)
+        }
+    }
+
+    &_show {
+        display: flex;
+    }
+}

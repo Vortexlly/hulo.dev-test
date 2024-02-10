@@ -1,0 +1,43 @@
+.promo {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    &__video-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &__name {
+            font-size: 30px;
+        }
+        &__text {
+            font-size: 22px;
+
+            span {
+                font-size: 18px;
+                text-decoration: underline;
+                font-style: italic;
+                color: #9DB2BF;
+            }
+        }
+    }
+
+    &__wrapper {
+        width: 960px;
+        position: relative;
+    }
+
+    &__img-slider {
+        width: 100%;
+        img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #DDE6ED;
+    font-family: 'Protest Riot', sans-serif;
+    letter-spacing: 2px;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(90deg, rgba(27,66,66,1) 0%, rgba(9,38,53,1) 15%, rgba(9,38,53,1) 85%, rgba(27,66,66,1) 100%);
+}
+
+.container {
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #27374D;
+}
+
+.slick-slide {
+    pointer-events: auto;
+}
+
+.slick-track {
+    height: 100%;
+}
+
+.full-height-video {
+    height: 100%;
+}
+
+@import './blocks/buttons';
+@import './blocks/header';
+@import './blocks/promo';
+@import './blocks/popup';
